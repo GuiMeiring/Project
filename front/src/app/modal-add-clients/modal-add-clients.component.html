@@ -1,0 +1,25 @@
+<mat-card-content>
+  <mat-card-title>
+    <h1>Cadastrar Cliente</h1>
+  </mat-card-title>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="Nome" [(ngModel)]="name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="CNPJ" type="text" [(ngModel)]="cnpj">
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <input matInput placeholder="Razão Social" [(ngModel)]="razaoSocial">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Cliente desde de </mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+  </mat-form-field>
+  <mat-card-actions>
+    <button  mat-raised-button color="primary" (click)="clientAdd()" >Cadastrar</button>
+    <button  mat-raised-button color="primary" (click)="onNoClick()" >Cancelar</button>
+  </mat-card-actions>
+</mat-card-content>
