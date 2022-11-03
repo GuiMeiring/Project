@@ -20,6 +20,8 @@ export class ModalSubgroupComponent implements OnInit {
   idGroup: number | undefined;
   subGroup: Array<any>= [];
   group: Array<any>= [];
+  
+  selectedGroup : number = 0;
   constructor(public dialogRef: MatDialogRef<ModalSubgroupComponent>, private httpService : HttpService,
     @Inject(MAT_DIALOG_DATA) public data: DialogDataSubGroup) { }
 

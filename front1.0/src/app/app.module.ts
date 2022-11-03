@@ -33,6 +33,7 @@ import { ModalAddProductsComponent } from './modal-add-products/modal-add-produc
 import { ModalAddClientsComponent } from './modal-add-clients/modal-add-clients.component';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { ModalEditUserComponent } from './modal-edit-user/modal-edit-user.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 
 @NgModule({
@@ -60,7 +61,8 @@ import { ModalEditUserComponent } from './modal-edit-user/modal-edit-user.compon
     ModalAddProductsComponent,
     ModalAddClientsComponent,
     UsuarioComponent,
-    ModalEditUserComponent
+    ModalEditUserComponent,
+    DropdownComponent
   ],
   imports: [
     RoutesModule,

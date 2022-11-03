@@ -13,6 +13,7 @@ export class ModalAddSubgroupComponent implements OnInit {
   idGroup: number | undefined;
   subGroup: Array<any>= [];
   group: Array<any>= [];
+  selectedGroup : number = 0;
 
   constructor(public dialogRef: MatDialogRef<ModalAddSubgroupComponent>, private httpService : HttpService) { }
 

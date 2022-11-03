@@ -31,3 +31,25 @@ knl.post('user', async(req, resp) => {
     await user.save();
     resp.end();
 });
+knl.get('user', async (req, resp)=>{
+    const result =await knl.sequelize().models.Usuario.findAll({
+        where: {
+            status:1
+        }
+    });
+    resp.json(result);
+    resp.end();
+})
+knl.patch('user/:id', async(req,resp)=>{
+    knl.createException('0007', '', req.body.password != req.body.cpassword);
+    const result = await knl.sequelize().models.Usuario.update({
+        password : md5(req.body.password),
+    },
+    {
+    where:{
+        id:req.params.id
+        }
+    });
+    resp.json(result);
+    resp.end();
+})

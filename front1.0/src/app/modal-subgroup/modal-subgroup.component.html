@@ -48,6 +48,9 @@
      <input matInput  placeholder="Descrição"  [(ngModel)]="description">
    </mat-form-field>
    <br>
+   <app-dropdown [array]="group" [idField]="'id'" [textField]="'description'" [title]="'Grupo'" [(ngModel)]="selectedGroup"></app-dropdown> 
+   
+   <br>
    <table>
      <tr>
        <th>ID</th>
